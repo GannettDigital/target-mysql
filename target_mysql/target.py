@@ -85,7 +85,13 @@ class TargetMySQL(SQLTarget):
             th.BooleanType,
             description="Replace null to blank",
             default=False
-        )
+        ),
+        th.Property(
+            "freeze_schema",
+            th.BooleanType,
+            description="Freeze schema",
+            default=True
+        ),
     ).to_dict()
 
     schema_properties = {}
